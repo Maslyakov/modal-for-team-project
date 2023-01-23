@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modern-normalize.css" />
+    <link rel="stylesheet" href="modal.css" class="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Seymour+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <button type="button" class="franchise-open" franchise-modal-open>Franchise ></button>
+    <button type="button" map-modal-open>Map ></button>
+
+
+    <div class="backdrop is-hidden" franchise-modal>
+        <div class="modal franchise">
+            <div class="modal-close-btn" franchise-modal-close><button type="button" class="close-icon">
+                <svg width="14" height="14" class="close-icon">
+                    <use href="Vector.svg"></use>
+                </svg>
+            </button></div>
+            <div class="modal-container">
+            <p class="modal-title">Thank you for your interest in owning an Ice Cream shop</p>
+            <p class="modal-description">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+            <form class="modal-form">
+                <div class="modal-form-item">
+                    <label for="name">
+                    <input type="text" name="name" id="name" class="modal-form-input" placeholder="Name" required />
+                    </label>
+                </div>
+    
+                <div class="modal-form-item">
+                    <label for="phone">
+                    <input type="tel" name="phone" id="phone" class="modal-form-input" placeholder="Phone" required />
+                    </label>
+                </div>
+                <div class="modal-form-item">
+                    <label for="mail">
+                    <input type="email" name="mail" id="mail" class="modal-form-input" placeholder="Email" required />
+                    </label>
+                </div>
+                <div class="modal-form-item">
+                    <label for="comment">
+                    <textarea name="franchise-comment" id="franchise-comment" placeholder="Comment"></textarea></label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="backdrop is-hidden" map-modal>
+        <div class="modal map">
+            <div class="modal-close-btn" map-modal-close><button type="button" class="close-icon">
+                <svg width="14" height="14">
+                    <use href="Vector.svg"></use>
+                </svg>
+            </button></div>
+            <div class="modal-container">
+            <p class="modal-title">Our Locations</p>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164153.23443639991!2d36.2858247!3d49.99459135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2sus!4v1674434033906!5m2!1sru!2sus" width="448" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-google"></iframe>
+                </div>
+                <form>
+                <button type="button"><a href="https://www.google.com/maps/place/%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2,+%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0/@49.9947277,36.1457423,11z/data=!3m1!4b1!4m5!3m4!1s0x4127a09f63ab0f8b:0x2d4c18681aa4be0a!8m2!3d49.9935051!4d36.2303782" target="_blank">Open map</a></button>
+            </form>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="modal.js"></script>
+</body>
+</html>

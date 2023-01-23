@@ -1,0 +1,173 @@
+/* -------- BACKDROP -------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4);
+    transform: scaleY(1);
+    transition: transform 500ms var(--animation), opacity 300ms var(--animation);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    transform: scaleY(0);
+    pointer-events: none;
+}
+
+/* -------- MODAL -------- */
+
+.modal.franchise,
+.modal.map {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 568px;
+    height: 668px;
+    max-width: 100vh;
+
+    font-family: Montserrat;
+    background-color: #FCFCFC;
+    border-radius: 10px;
+    border: 2px solid #F8D24E;
+}
+
+.modal.map {
+    height: 458px;
+}
+
+.modal-container {
+    padding: 32px 60px;
+}
+
+.modal-title {
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    width: 322px;
+    font-size: 20px;
+    font-family: Seymour One;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.modal-description {
+    width: 448;
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+/* MAP IN MODAL */
+
+.map-responsive{
+    margin-bottom: 32px;
+}
+
+.map-google {
+    border-radius: 10px;
+}
+
+/* -------- MODAL-FORM -------- */
+
+.modal-form {
+    width: 368px;
+    margin: 0 auto;
+}
+
+.modal-form-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.modal-form-input {
+    height: 42px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 11px 16px;
+    border: 1px solid #84A178;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 10px;
+}
+
+.modal-form-input::placeholder,
+textarea::placeholder {
+    font-family: Montserrat;
+    color: #131313;
+}
+
+textarea[id="franchise-comment"] {
+    resize: none;
+    width: 100%;
+    height: 84px;
+    margin-bottom: 32px;
+    padding: 11px 16px;   
+    border: 1px solid #84A178;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    border-radius: 10px; 
+    line-height: 1.4;
+}
+
+form button[type="submit"],
+form button[type="button"] {
+    display: block;
+    padding: 12px 34px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 14px;
+    color: #131313;
+    background-color: #F8D24E;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.21;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: #131313;
+}
+
+/* -------- MODAL-CLOSE-BTN -------- */
+
+.modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.close-icon {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url(Vector.svg);
+    background-size: contain;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+}
+
+.modal button[class="close-icon"] {
+    border: 0px;
+}
