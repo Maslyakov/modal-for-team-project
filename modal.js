@@ -12,12 +12,42 @@
       refs.modal.classList.toggle("is-hidden");
     }
   })();
-
-(() => {
+  
+  (() => {
     const refs = {
       openModalBtn: document.querySelector("[map-modal-open]"),
       closeModalBtn: document.querySelector("[map-modal-close]"),
       modal: document.querySelector("[map-modal]"),
+    };
+  
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle("is-hidden");
+    }
+  })();
+  
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector("[how-made-modal-open]"),
+      closeModalBtn: document.querySelector("[how-made-modal-close]"),
+      modal: document.querySelector("[how-made-modal]"),
+    };
+  
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle("is-hidden");
+    }
+  })();
+  
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector("[product-modal-open]"),
+      closeModalBtn: document.querySelector("[product-modal-close]"),
+      modal: document.querySelector("[product-modal]"),
     };
   
     refs.openModalBtn.addEventListener("click", toggleModal);
