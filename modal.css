@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: rgba(46, 47, 66, 0.4);
+    background-color: rgba(57, 49, 19, 0.45);
     transform: scaleY(1);
     transition: transform 500ms var(--animation), opacity 300ms var(--animation);
 }
@@ -28,8 +28,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 568px;
-    height: 668px;
+    width: 280px;
+    height: 674px;
     max-width: 100vh;
 
     font-family: Montserrat;
@@ -39,44 +39,47 @@
 }
 
 .modal.map {
-    height: 458px;
+    height: 365px;
 }
 
 .modal-container {
-    padding: 32px 60px;
+    padding: 28px;
 }
 
 .modal-title {
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
-    width: 322px;
-    font-size: 20px;
+    width: 221px;
+    font-size: 16px;
     font-family: Seymour One;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: center;
 }
 
 .modal-description {
-    width: 448;
-    margin-bottom: 32px;
+    width: 222px;
+    margin-bottom: 24px;
+    font-size: 14px;
     line-height: 1.4;
 }
 
-/* MAP IN MODAL */
+/* -------- MAP IN MODAL -------- */
 
 .map-responsive{
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .map-google {
+    width: 224px;
+    height: 199px;
     border-radius: 10px;
 }
 
 /* -------- MODAL-FORM -------- */
 
 .modal-form {
-    width: 368px;
+    width: 224px;
     margin: 0 auto;
 }
 
@@ -87,13 +90,12 @@
 }
 
 .modal-form-input {
-    height: 42px;
+    height: 32px;
     width: 100%;
-    margin-bottom: 16px;
-    padding: 11px 16px;
+    margin-bottom: 12px;
+    padding: 8px 12px;
     border: 1px solid #84A178;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 12px;
     border-radius: 10px;
 }
 
@@ -106,11 +108,11 @@ textarea::placeholder {
 textarea[id="franchise-comment"] {
     resize: none;
     width: 100%;
-    height: 84px;
-    margin-bottom: 32px;
-    padding: 11px 16px;   
+    height: 64px;
+    margin-bottom: 24px;
+    padding: 8px 12px;   
     border: 1px solid #84A178;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.04em;
     border-radius: 10px; 
     line-height: 1.4;
@@ -123,7 +125,7 @@ form button[type="button"] {
     margin-left: auto;
     margin-right: auto;
 
-    font-size: 14px;
+    font-size: 12px;
     color: #131313;
     background-color: #F8D24E;
     font-family: inherit;
@@ -164,10 +166,67 @@ button a {
     background-image: url(Vector.svg);
     background-size: contain;
     cursor: pointer;
-    width: 14px;
-    height: 14px;
+    width: 11px;
+    height: 11px;
 }
 
 .modal button[class="close-icon"] {
     border: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal.franchise,
+    .modal.map {
+    width: 568px;
+    height: 668px;
+    }
+    .modal.map {
+    height: 458px;
+    }
+    .modal-container {
+    padding: 32px 60px;
+    }
+    .modal-title {
+    margin-bottom: 24px;
+
+    width: 322px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+    .modal-description {
+    width: 448px;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+    .map-responsive{
+    margin-bottom: 32px;
+}
+    .map-google {
+    width: 448px;
+    height: 260px;
+}
+    .modal-form {
+    width: 368px;
+}
+    .modal-form-input {
+    height: 42px;
+    margin-bottom: 16px;
+    padding: 11px 16px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+    textarea[id="franchise-comment"] {
+    height: 84px;
+    margin-bottom: 32px;
+    padding: 11px 16px;   
+    font-size: 14px;
+}
+    form button[type="submit"],
+    form button[type="button"] {
+    font-size: 14px;
+}
+    .close-icon {
+    width: 14px;
+    height: 14px;
+}
 }
